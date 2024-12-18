@@ -1,7 +1,11 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
+\usepackage[L7x,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{multicol}
 
-\title{IBM System 370 vs. Raytheon 704}
+\title{\bold{IBM System 370 vs. Raytheon 704} \\1970 metų architektūros}
 \author{Rasa Šileikytė}
 \date{Gruodis 2024}
 
@@ -9,6 +13,28 @@
 
 \maketitle
 
-\section{Introduction}
+\section*{Elementinės kompiuterių bazės bei matmenys}
+\begin{multicols}{2}
+IBM System 370 (Modelis 145):
+\begin{itemize}
+\item Bipoliniai integriniai grandynai, didelis integracijos mąstas (LSI).
+\item Pagrindinė atmintis - puslaidininkiai (Pirmas toks IBM kompiuteris/minikompiuteris)
+\item Dydis - Didelės apimties (nedidelio kambario dydžio)
+\item Svoris - apie toną.
+\item Energijos suvartojimas - didelis
+\end{itemize}
+
+\columnbreak
+
+Raytheon 704 :
+\begin{itemize}
+\item Atmintis - Magnetinės šerdys
+\item Dydis - Nedidelės apimties (16x18x24)(coliai)
+\item Svoris - 75(lbs) arba apie 34 kg.
+\item Energijos suvartojimas - mažesnis (palyginus su IBM)
+\end{itemize}
+\end{multicols}
+
+
 
 \end{document}
