@@ -39,6 +39,75 @@ Raytheon 704 :
 IBM System 370 (Modelis 145): registrinis - šešiolika 32-bitų bendros paskirties registrų (indeksavimas, akumuliatoriai), keturi 64-bitų float tipo registrai. Naudojami požymių bitai (Zero, Negative, Carry, Overflow). Mašininis žodis 32-bitų.
 
 \columnbreak
-Raytheon 704 : akumuliatorinis - atminties dydis žodžiais 4096, žodžio ilgis 16-bitų ir 1 baitas parity. Naudojami požymių bitai (Negative, Zero) Mašininis žodis 18 bitų.
+Raytheon 704 : akumuliatorinis ir registrinis - atminties dydis žodžiais 4096, žodžio ilgis 16-bitų ir 1 baitas parity, keturi 15-bitų adresų registrai ir vienas indeksavimo registras. Naudojami požymių bitai (Negative, Zero) Mašininis žodis 16 bitų.
 \end{multicols}
+
+\section*{Architektų instrukcijos}
+
+IBM System 370 (Modelis 145): Adresų erdvė ištisinė, efektyvus adreso plotis 32-bitai, maksimalus atminties kiekis 4 GB, tipiškas atminties kiekis apie 512 MB. Ši sistema palaikė virtualiąją atmintį realizuotą puslapiavimu. Instrukcijų klasės:
+\begin{itemize}
+    \item Aritmetinės ir loginės komandos (sudėtis, atimtis ir t.t)
+    \item Atminties manipuliavimo komandos (LDA - load accumulator ir t.t)
+    \item Kontrolės ir šokimo komandos (BR - branch)
+    \item Input/Output komandos
+    \item Atminties valdymo komandos (komandos atminties suskirstymui)
+\end{itemize}
+Instrukcijų formatai:
+\begin{itemize}
+    \item Op kodas (Opcode): 8 bitai.
+    \item Adresavimo operandai: Iki 24 bitų, priklausomai nuo instrukcijos tipo.
+\end{itemize}
+Instrukcijų pavyzdžiai:
+\begin{itemize}
+    \item LDA (Load Accumulator) – Įkrauna duomenis į akumuliatorių.
+    \item STA (Store Accumulator) – Išsaugo duomenis iš akumuliatoriaus į atmintį.
+    \item ADD (Add) – Atlieka sudėjimo operaciją su registru.
+    \item SUB (Subtract) – Atlieka atimties operaciją.
+    \item AND (Logical AND) – Atlieka loginį AND.
+    \item OR (Logical OR) – Atlieka loginį OR.
+    \item BR (Branch) – Atlikti šuolį į kitą vietą atmintyje.
+    \item BNE (Branch if Not Equal) – Šokti, jei sąlyga įvykdyta.
+    \item JUMP (Unconditional jump) – Ne sąlyginis šuolis.
+    \item TST (Test) – Testuoja bitų būseną.
+    \item CMP (Compare) – Palygina du reikšmes.
+    \item MUL (Multiply) – Atlieka dauginimo operaciją.
+    \item DIV (Divide) – Atlieka dalijimo operaciją.
+    \item SVC (Supervisor Call) – Kreipiasi į operacinę sistemą.
+
+\end{itemize}
+
+
+
+Raytheon 704 : Atmintis ištisinė (kaupiama moduliuose), efektyvus adreso plotis 16-bitų, maksimalus atminties kiekis 16 MB, tipiškas atminties kiekis apie 8 MB. Ši sistema nepalaikė virtualios atminties vykdė tiesioginį adresavimą.
+Instrukcijų klasės:
+\begin{itemize}
+    \item Aritmetinės ir loginės komandos (sudėtis, atimtis ir t.t)
+     \item Duomenų perkėlimo komandos (LDA - load Accumulator ir t.t)
+    \item Kontrolės ir šokimo komandos (BR - branch)
+    \item Specializuotos komandos (nulinio reikšmės testavimas).
+\end{itemize}
+Instrukcijų formatai:
+\begin{itemize}
+    \item Op kodas: 6 bitai.
+    \item Adresavimo operandai: 18 bitų, atitinkantys duomenų adresus ar reikšmes.
+\end{itemize}
+Instrukcijų pavyzdžiai:
+\begin{itemize}
+    \item ADD (Add) – Atlieka sudėjimo operaciją.
+    \item SUB (Subtract) – Atlieka atimties operaciją.
+    \item LDA (Load Accumulator) – Įkrauna reikšmę į akumuliatorių.
+    \item STA (Store Accumulator) – Saugo reikšmę iš akumuliatoriaus į atmintį.
+    \item CMP (Compare) – Palygina du registrus.
+    \item BR (Branch) – Atlikti šuolį.
+    \item BNE (Branch if Not Equal) – Šokti, jeigu sąlyga įvykdyta.
+    \item JSR (Jump to Subroutine) – Atlikti šuolį į subrutinę.
+    \item TST (Test) – Tikrina duomenų būseną.
+    \item NOP (No Operation) – Neatlieka jokios operacijos (laiko švaistymas).
+    \item MUL (Multiply) – Atlieka dauginimo operaciją.
+    \item DIV (Divide) – Atlieka dalijimo operaciją.
+    \item DIVU (Divide Unsigned) – Atlieka nesigned dalijimą.
+\end{itemize}
+\section*{Adresavimo būdai}
+
+
 \end{document}
