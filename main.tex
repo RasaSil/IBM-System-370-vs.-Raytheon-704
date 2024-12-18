@@ -108,6 +108,28 @@ Instrukcijų pavyzdžiai:
     \item DIVU (Divide Unsigned) – Atlieka nesigned dalijimą.
 \end{itemize}
 \section*{Adresavimo būdai}
+IBM System/370 :
+\begin{itemize}
+    \item Registrų adresavimas (Register Addressing)
+    \item Tiesinis adresavimas (Imediate Addressing)
+    \item Tiesioginis adresavimas (Direct Addressing)
+    \item Ne tiesioginis adresavimas (Indirect Addressing)
+    \item Ne tiesioginis su viena indekso reikšme (Indexed Addressing)
+    \item Adresavimas per bazinius registrus (Base Register Addressing)
+    \item Ne tiesioginis adresavimas su pakeitimu (Relative Addressing)
+\end{itemize}
+Raytheon 704 :
+\begin{itemize}
+    \item Registrų adresavimas (Register Addressing)
+    \item Tiesioginis adresavimas (Direct Addressing)
+    \item Ne tiesioginis adresavimas (Indirect Addressing)
+    \item Indekso adresavimas (Indexed Addressing)
+    \item Reliatyvus adresavimas (Relative Addressing)
+\end{itemize}
+Registrų adresavimas, tiesioginis adresavimas, indirektinis adresavimas, indeksuotas adresavimas ir relatyvus adresavimas buvo bendri tiek IBM System/370, tiek Raytheon 704 architektūroms. Abu kompiuteriai palaikė galimybę pasiekti atminties operacijas su registrų ir tiesioginių atminties adresų naudojimu. Raytheon 704 turėjo paprastesnę adresavimo sistemą su mažiau pažangių metodų. IBM System/370 buvo gerokai išvystytas dėl to, kad įtraukė ir atminties valdymo instrukcijas.
 
-
+\section*{Input/Output galimybės}
+IBM System/370 naudojo kanalo valdymo sistemą (angl. Channel I/O) bei Tiesioginė atminties prieiga (DMA) - Kanalo valdymas buvo įtrauktas į procesorių, ir kiekvienas įrenginys buvo prijungtas prie kanalo, kuris buvo atsakingas už duomenų perdavimą tarp įrenginių ir atminties. Ši sistema leido kompiuteriui vykdyti duomenų pervedimo operacijas be tiesioginio procesoriaus įsikišimo. Ši architektūra taip pat palaikė diskinius įrenginius, magnetines juostas, spausdintuvus bei "punch" korteles.
+\\
+Raytheon 704 taip pat turėjo DMA, leidžiančią tiesiogiai perduoti duomenis tarp I/O įrenginių ir pagrindinės atminties be procesoriaus įsikišimo. Taip pat palaikė diskinius įrenginius, magnetines juostas, spausdintuvus bei "punch" korteles.
 \end{document}
