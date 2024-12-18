@@ -132,4 +132,28 @@ Registrų adresavimas, tiesioginis adresavimas, indirektinis adresavimas, indeks
 IBM System/370 naudojo kanalo valdymo sistemą (angl. Channel I/O) bei Tiesioginė atminties prieiga (DMA) - Kanalo valdymas buvo įtrauktas į procesorių, ir kiekvienas įrenginys buvo prijungtas prie kanalo, kuris buvo atsakingas už duomenų perdavimą tarp įrenginių ir atminties. Ši sistema leido kompiuteriui vykdyti duomenų pervedimo operacijas be tiesioginio procesoriaus įsikišimo. Ši architektūra taip pat palaikė diskinius įrenginius, magnetines juostas, spausdintuvus bei "punch" korteles.
 \\
 Raytheon 704 taip pat turėjo DMA, leidžiančią tiesiogiai perduoti duomenis tarp I/O įrenginių ir pagrindinės atminties be procesoriaus įsikišimo. Taip pat palaikė diskinius įrenginius, magnetines juostas, spausdintuvus bei "punch" korteles.
+\section*{Pertraukimai}
+Abi architektūros palaikė I/O pertraukimus ir programinius pertraukimus. Raytheon 704 ir IBM System/370 turėjo laiko pertraukimo mechanizmą, kuris buvo svarbus laiko dalijimo sistemoms.
+IBM System/370 turėjo sudėtingesnį ir labiau išvystytą pertraukimo valdymą, įskaitant kanalo pertraukimo mechanizmus ir aukštą prioritetų valdymą, tuo tarpu Raytheon 704 pertraukimo mechanizmai buvo paprastesni, su mažiau sudėtingų prioritetų ir valdymo funkcijų.
+IBM System/370 galėjo valdyti daugiau I/O įrenginių.
+\section*{Greitaveika}
+Taktinis dažnis:
+\begin{itemize}
+    \item IBM System/370 Model 145: 1 MHz – 2 MHz.
+    \item Raytheon 704: 1 MHz.
+\end{itemize}
+Ciklų skaičius komandai:
+\begin{itemize}
+    \item IBM System/370 Model 145: 4–10 ciklų.
+    \item Raytheon 704: 2–5 ciklai.
+\end{itemize}
+Vidutinė sistemos greitaveika:
+\begin{itemize}
+    \item IBM System/370 Model 145 buvo greitesnė ir efektyvesnė sudėtingesniems kompiuteriniams procesams.
+    \item Raytheon 704 buvo greitesnė paprastoms užduotims, tačiau turėjo mažesnį našumą, kai kalbama apie sudėtingus skaičiavimus.
+\end{itemize}
+\section*{Sparčioji atmintis}
+IBM System/370 architektūra, ypač Modelis 145, buvo viena pirmųjų, kuri pradėjo naudoti spartinančiąją atmintį. "Cache" atmintis buvo įdiegta kaip spartinimo priemonė, kad sumažintų prieigos laiką prie atminties. Spartinančios atminties dydis buvo ne itin didelis.
+\\
+Raytheon 704 nenaudojo spartinančiosios atminties, tačiau buvo naudojama specializuota atmintis (registrų rinkiniai), kuri buvo skirta spartinti tam tikras komandas.
 \end{document}
