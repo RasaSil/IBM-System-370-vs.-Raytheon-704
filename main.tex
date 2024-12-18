@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{multicol}
+\usepackage{hyperref}
 
 \title{\bold{IBM System 370 vs. Raytheon 704} \\1970 metų architektūros}
 \author{Rasa Šileikytė}
@@ -156,4 +157,34 @@ Vidutinė sistemos greitaveika:
 IBM System/370 architektūra, ypač Modelis 145, buvo viena pirmųjų, kuri pradėjo naudoti spartinančiąją atmintį. "Cache" atmintis buvo įdiegta kaip spartinimo priemonė, kad sumažintų prieigos laiką prie atminties. Spartinančios atminties dydis buvo ne itin didelis.
 \\
 Raytheon 704 nenaudojo spartinančiosios atminties, tačiau buvo naudojama specializuota atmintis (registrų rinkiniai), kuri buvo skirta spartinti tam tikras komandas.
+\section*{Sistemų panaudojimas}
+IBM System/370 Modelis 145  dėl savo pažangios architektūros ir didelio našumo, buvo plačiai naudojamas bankininkystėje, vyriausybinėse institucijose ir universitetuose. Pavyzdžiui, IBM System/370 Model 145 buvo naudojamas finansinių paslaugų sektoriuje, apdorojant didelius kiekius duomenų, atlikinėjant statistinius skaičiavimus ir valdyti didžiules duomenų bazes.
+\\
+Raytheon 704 buvo naudojamas karinėse ir oro gynybos sistemose, siekiant apdoroti didelius kiekius duomenų realiuoju laiku ir priimti kritinius sprendimus. Taip pat buvo naudojamas raketų gynybos sistemose, analizuojant radarų duomenis ir atliekant sudėtingus skaičiavimus, siekiant nustatyti galimas grėsmes ir koordinuoti gynybos atsaką. 
+\section*{Programinė įranga ir jos prieinamumas}
+IBM System/370:\\
+Kompiliatoriai ir programavimo įrankiai:
+\begin{itemize}
+    \item Fortran, COBOL, PL/I, RPG ir kiti tradiciniai programavimo kalbos buvo palaikomi.
+    \item IBM taip pat siūlė assembler ir C kalbos kompiliatorius šiai architektūrai.
+\end{itemize}
+Prieinamumas: Dėl populiarumo ir ilgalaikės paramos IBM šiuo metu vis dar siūlo emuliatorius, kurie leidžia naudoti senąją programinę įrangą šiuolaikinėse sistemose.
+\\
+Raytheon 704:\\
+Kompiliatoriai ir programavimo įrankiai:
+\begin{itemize}
+    \item Programavimo kalbos, naudojamos Raytheon 704 sistemoje, buvo specialiai pritaikytos šios sistemos specifikacijoms, tačiau komercinių kalbų, tokių kaip Fortran ar COBOL, naudojimas šiose sistemose buvo ribotas.
+    \item Assembler programavimo kalba buvo pagrindinė priemonė, naudojama programuoti šio tipo sistemas.
+    \item Buvo naudojama specializuota programinė įranga (raketų gynybos sistemos ir radarų duomenų apdorojimas) 
+\end{itemize}
+Prieinamumas: Kadangi Raytheon 704 buvo naudojamas dažniausiai kariniuose ir pramoniniuose sektoriuose, dauguma programinės įrangos buvo ne vieša ir buvo laikoma slapta, ji nėra lengvai prieinama arba prieinama tik ribotai, net ir šiandien.
+\section*{Šaltiniai}
+\begin{itemize}
+    \item Raytheon Compiuter(1970) Raytheon 704 Technical Manual\href{https://bitsavers.org/pdf/raytheon/70x/Ray704_TechnicalManual_Jul1970.pdf}{Peržiūrėti čia}
+    \item IBM (1970) A Guide To The IBM System/370 Model 145 \href{http://www.bitsavers.org/pdf/ibm/370/systemGuide/GC20-1734-2_370-145_Guide_Aug72.pdf}{Peržiūrėti čia}
+    \item (Wikipedia,2024)\href{https://en.wikipedia.org/wiki/IBM_System/370}{Peržiūrėti čia}
+    \item (Wikipedia,2024)\href{https://en.wikipedia.org/wiki/Raytheon_704}{Peržiūrėti čia}
+\end{itemize}
+Šaltiniuose pateikta informacija buvo pateikta ChatGPT-3 ir išanalizuota. Užklausų "promptai" buvo pateikti, kaip ir suformuluoti dėstytojo.
+https://chatgpt.com/share/67632d76-5450-8013-89dd-148e732a61c0
 \end{document}
